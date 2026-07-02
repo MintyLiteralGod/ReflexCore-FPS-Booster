@@ -10,7 +10,7 @@ ReflexCore is a zero-bloat, bare-metal performance optimization matrix engineere
 ## 📥 Deployment Download Channels
 To run the optimization engine instantly on your system, acquire the certified installation package below:
 
-👉 **[DOWNLOAD NATIVE RUNTIME INSTALLER (.EXE)](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/OFFICIALRELEASE/ReflexCore_Setup.exe)**
+👉 **[DOWNLOAD NATIVE RUNTIME INSTALLER (.EXE)](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/OFFICIALRELEASE1.2.2/ReflexCore_Setup.exe)**
 
 * **Unified Executable Architecture:** Downloads instantly as the baseline Free Edition. Premium layers are toggled instantly and dynamically in-app—no extra file downloads or re-installations required.
 * **Administrative Privilege Warning:** Because this utility manipulates local hardware processing loops and system registers, the installer and software application will require Windows Administrative Elevation (UAC Prompt) to successfully bind tracking maps.
