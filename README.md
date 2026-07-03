@@ -89,15 +89,15 @@ Plaintext
 ReflexCore handles low-level platform timers and kernel configurations. It explicitly requires Administrator Privileges to execute. If elevation is blocked, the engine will safely drop out to protect user state configurations.
 
 # 🛡️ Anti-Cheat & League Compliance
-## ReflexCore is designed purely at the Windows subsystem tier, making it 100% safe and authorized for all major competitive platforms and anti-cheat layers.
+### ReflexCore is designed purely at the Windows subsystem tier, making it 100% safe and authorized for all major competitive platforms and anti-cheat layers.
 
-## Zero Memory Injection: The engine performs no runtime memory manipulation, patch injection, or handle-hooking on running game clients. It does not touch your game files.
+### Zero Memory Injection: The engine performs no runtime memory manipulation, patch injection, or handle-hooking on running game clients. It does not touch your game files.
 
-## Pure OS Registry Tweak Architecture: It limits all execution adjustments entirely to native, built-in Windows environment parameters before game architectures even launch.
+### Pure OS Registry Tweak Architecture: It limits all execution adjustments entirely to native, built-in Windows environment parameters before game architectures even launch.
 
-## Verified Safe Environments: Fully compliant with Valve Anti-Cheat (VAC), Riot Vanguard, EasyAntiCheat (EAC), BattlEye, and FACEIT systems.
+### Verified Safe Environments: Fully compliant with Valve Anti-Cheat (VAC), Riot Vanguard, EasyAntiCheat (EAC), BattlEye, and FACEIT systems.
 
-#❓ Frequently Asked Questions (FAQ)
+# ❓ Frequently Asked Questions (FAQ)
 ### Q: Is the $14.99 Pro Suite license a subscription?
 ### A: No. It is a one-time, lifetime purchase. Once you secure your cryptographic license key via our secure checkout gateway, you own that optimization slot forever. All future v1.X engine updates and feature expansions are completely free.
 
