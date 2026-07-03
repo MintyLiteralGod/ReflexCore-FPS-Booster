@@ -88,24 +88,24 @@ Plaintext
 [!IMPORTANT]
 ReflexCore handles low-level platform timers and kernel configurations. It explicitly requires Administrator Privileges to execute. If elevation is blocked, the engine will safely drop out to protect user state configurations.
 
-🛡️ Anti-Cheat & League Compliance
-ReflexCore is designed purely at the Windows subsystem tier, making it 100% safe and authorized for all major competitive platforms and anti-cheat layers.
+# 🛡️ Anti-Cheat & League Compliance
+## ReflexCore is designed purely at the Windows subsystem tier, making it 100% safe and authorized for all major competitive platforms and anti-cheat layers.
 
-Zero Memory Injection: The engine performs no runtime memory manipulation, patch injection, or handle-hooking on running game clients. It does not touch your game files.
+## Zero Memory Injection: The engine performs no runtime memory manipulation, patch injection, or handle-hooking on running game clients. It does not touch your game files.
 
-Pure OS Registry Tweak Architecture: It limits all execution adjustments entirely to native, built-in Windows environment parameters before game architectures even launch.
+## Pure OS Registry Tweak Architecture: It limits all execution adjustments entirely to native, built-in Windows environment parameters before game architectures even launch.
 
-Verified Safe Environments: Fully compliant with Valve Anti-Cheat (VAC), Riot Vanguard, EasyAntiCheat (EAC), BattlEye, and FACEIT systems.
+## Verified Safe Environments: Fully compliant with Valve Anti-Cheat (VAC), Riot Vanguard, EasyAntiCheat (EAC), BattlEye, and FACEIT systems.
 
-❓ Frequently Asked Questions (FAQ)
-Q: Is the $14.99 Pro Suite license a subscription?
-A: No. It is a one-time, lifetime purchase. Once you secure your cryptographic license key via our secure checkout gateway, you own that optimization slot forever. All future v1.X engine updates and feature expansions are completely free.
+#❓ Frequently Asked Questions (FAQ)
+### Q: Is the $14.99 Pro Suite license a subscription?
+### A: No. It is a one-time, lifetime purchase. Once you secure your cryptographic license key via our secure checkout gateway, you own that optimization slot forever. All future v1.X engine updates and feature expansions are completely free.
 
-Q: Can I run this alongside normal game booster apps?
-A: You can, but you won't need to. Standard game boosters just clear your clipboard and close your browser. ReflexCore operates at a raw kernel tier—handling things like CPU Core Shunting (KDLS) and 0.5ms Clock lockdowns that commercial software cannot touch.
+### Q: Can I run this alongside normal game booster apps?
+### A: You can, but you won't need to. Standard game boosters just clear your clipboard and close your browser. ReflexCore operates at a raw kernel tier—handling things like CPU Core Shunting (KDLS) and 0.5ms Clock lockdowns that commercial software cannot touch.
 
-Q: What exactly does KDLS do for my aim?
-A: If you own a modern gaming mouse pulling at 4000Hz or 8000Hz, your input device is bombarding your CPU with data thousands of times per second. Windows normally tries to handle these requests on the same CPU core rendering your game, causing micro-stutters and sudden mouse desync mid-fight. KDLS forcefully redirects all non-esports hardware signals onto secondary cores, giving your mouse raw, un-throttled access to your processor for perfect pixel-to-sensor tracking.
+### Q: What exactly does KDLS do for my aim?
+### A: If you own a modern gaming mouse pulling at 4000Hz or 8000Hz, your input device is bombarding your CPU with data thousands of times per second. Windows normally tries to handle these requests on the same CPU core rendering your game, causing micro-stutters and sudden mouse desync mid-fight. KDLS forcefully redirects all non-esports hardware signals onto secondary cores, giving your mouse raw, un-throttled access to your processor for perfect pixel-to-sensor tracking.
 
-Q: How do I apply my Pro Suite key?
-A: Simply download the Free build, click the "Enter Pro Key" button inside the classic Steam-themed interface, and paste your key. The application instantly validates your license node offline and securely unlocks your premium kernel configurations on the fly.
+### Q: How do I apply my Pro Suite key?
+### A: Simply download the Free build, click the "Enter Pro Key" button inside the classic Steam-themed interface, and paste your key. The application instantly validates your license node offline and securely unlocks your premium kernel configurations on the fly.
