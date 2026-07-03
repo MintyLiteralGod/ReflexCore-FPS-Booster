@@ -1,55 +1,68 @@
-# 👑 ReflexCore by LIFT Esports (Unified Build v1.0)
+# 🏎️ ReflexCore (v1.2.5)
 
-![License](https://img.shields.io/badge/License-Proprietary-gold.svg)
-![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-blue.svg)
-![Build](https://img.shields.io/badge/Build-Production%20Release-green.svg)
-![Anti-Cheat](https://img.shields.io/badge/Anti--Cheat-100%25%20Safe%20%2F%20Compliant-success.svg)
+**Brought to you by LIFT Esports // Developed by MintyLiteralGod**
 
-ReflexCore is a zero-bloat, bare-metal performance optimization matrix engineered natively in C# to maximize hardware polling states, lock system processing clocks, and eliminate downstream network bufferbloat.
+[![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://reflexcore.xyz/)
+[![Framework](https://img.shields.io/badge/framework-.NET%207.0--windows-purple.svg)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-Proprietary-gold.svg)](https://reflexcore.xyz/)
+[![Anti-Cheat](https://img.shields.io/badge/Anti--Cheat-Safe%20/%20Compliant-green.svg)](#-anti-cheat-compliance)
 
-## 📥 Deployment Download Channels
-To run the optimization engine instantly on your system, acquire the certified installation package below:
+Engineered by **MintyLiteralGod** and backed by the **LIFT Esports** infrastructure, **ReflexCore** is a high-performance system optimization engine. It strips away Windows kernel latency bottlenecks, locks down sub-millisecond scheduling precision, and clears heavy frame-pacing variance to stabilize your 1% low FPS boundaries.
 
-👉 **[DOWNLOAD NATIVE RUNTIME INSTALLER (.EXE)](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/OFFICIALRELEASE1.2.2/ReflexCore_Setup.exe)**
+Instead of running generic batch commands or destructive registry scripts, ReflexCore leverages low-level Win32 API calls and native hardware-affinity parameters to build an ultra-responsive gaming runtime environment.
 
-* **Unified Executable Architecture:** Downloads instantly as the baseline Free Edition. Premium layers are toggled instantly and dynamically in-app—no extra file downloads or re-installations required.
-* **Administrative Privilege Warning:** Because this utility manipulates local hardware processing loops and system registers, the installer and software application will require Windows Administrative Elevation (UAC Prompt) to successfully bind tracking maps.
+🔗 **Official Domain:** [reflexcore.xyz](https://reflexcore.xyz/)
 
 ---
 
-## ⚡ Unified Feature Matrix
+## ⚡ Core Architecture Features
 
-### 🟢 Free Baseline Matrix (Included by Default)
-* **0.5ms Target Platform Resolution:** Pin-locks Windows NT system scheduling frequencies to their absolute physical boundaries, flattening input-to-display polling variance.
-* **OS Dynamic Tick Suppression:** Commands the Windows kernel to bypass structural power-saving idle cycles, ensuring immediate thread execution wake-times.
-* **Multimedia Polling Elevation:** Heightens hardware priorities for multimedia interrupt polling routines, stabilizing mouse tracking coordinates during heavy visual loads.
-* **DSCP Priority Mapping (Route 46):** Automatically routes chosen game executables (such as `cs2.exe` and `VALORANT-Win64-Shipping.exe`) down local enterprise network rails, isolating your matchmaking connection against household bufferbloat.
+### 🛑 Process Purge Matrix (Free)
+A runtime task-termination matrix designed to kill resource-heavy background telemetry apps, hidden update managers, and web helper processes on command. To preserve system stability, it runs against an explicit whitelist protecting essential gaming tools:
+* `Discord.exe` / `Spotify.exe`
+* `Steam.exe` / `steamwebhelper.exe`
+* `TeamSpeak.exe` / `Guilded.exe`
+* `explorer.exe` / `taskmgr.exe`
 
-### 👑 Premium Pro Matrix (Unlockable In-App)
-* **TCP NoDelay Initialization:** Terminates Nagle's data-buffering algorithms, instantly dispatching network packets to drop spatial positioning latency.
-* **100% Processing Dedication:** Disables Windows performance throttling, keeping 100% of CPU capabilities directed strictly toward your active gaming window.
-* **Telemetry Overlay Unhooking:** Disables Windows Game DVR recording layers, backgrounds, and overlay structures that introduce micro-stuttering tracking loops.
-* **Ultimate Power Scheme Forcing:** Deploys and activates hidden Windows performance power schemes, unparking critical cores to maximize lowest 1% frame rate limits.
-* **Forced HAGS Scheduling:** Integrates directly with the Windows Graphics Driver register stack to prioritize Hardware-Accelerated GPU Scheduling APIs.
-* **1:1 Pointer Transformation Curves:** flattens underlying Windows mouse curve calculations, ensuring flawless muscular memory tracking across your desk space.
+### 📼 VRAM Standby Flusher (Free)
+Forces the Windows memory management layers to dump cached, unmapped standby RAM tables and graphic pipeline leak caches. This keeps your physical VRAM responsive and actively prevents long-session hitching inside asset-heavy titles.
 
----
+### ⛓️ DirectX Pipeline Locker (Free)
+Locks global shader pre-caching boundaries within graphics driver states. This limits micro-stuttering caused by on-the-fly shader compilation routines when entering unfamiliar map zones or loading complex assets.
 
-## 🔑 Activating Pro Status
-If you purchased a lifetime registration license key from our official digital storefront, follow these activation rules:
-1. Launch **ReflexCore** on your desktop.
-2. Click the white **🔑 ENTER PRO KEY** button located on the dashboard layout.
-3. Paste the cryptographic key delivered to your registration email address.
-4. Click **Verify**. The Performance Console will instantly transition to the gold **[PRO EDITION]** profile configuration, unlocking all greyed-out optimization settings permanently.
+### ⚡ 0.5ms Timer Resolution Forcing (Free)
+Bypasses default Windows NT scheduler caps to claim a strict, hardware-enforced **0.5ms clock precision boundary**. This stabilizes driver response loops for high-frequency input arrays.
+
+### 🧬 Kernel DPC Lane Shunting - KDLS (Pro Exclusive)
+A proprietary hardware affinity optimization layout built for advanced esports input layers (**4000Hz / 8000Hz polling controllers and mice**). Accessible via its own dedicated matrix panel button, KDLS dynamically intercepts background Deferred Procedure Calls (DPCs) and moves them completely away from physical CPU Core 0 and Core 1, isolating them entirely for your game’s primary engine threads.
 
 ---
 
-## 🛡️ Anti-Cheat & Security Compliance
-ReflexCore does **not** inject code, read live memory modules, or alter server-side telemetry tracking pools. The application is entirely localized, safe, and fully compliant under all modern esports anti-cheat deployment solutions:
-* Vanguard (Valorant)
-* Easy Anti-Cheat (Apex Legends)
-* BattlEye (Rainbow Six Siege / Destiny 2)
-* RICOCHET (Call of Duty)
+## 📊 Feature Comparison Matrix
+
+| Optimization Node | Free Core Engine | Pro Suite License |
+| :--- | :---: | :---: |
+| **0.5ms System Timer Override** | ✔ | ✔ |
+| **DirectX Shader Pre-Caching Flags** | ✔ | ✔ |
+| **Standby VRAM Dynamic Flush** | ✔ | ✔ |
+| **Background Process Purge Matrix** | ✔ | ✔ |
+| **Kernel DPC Lane Shunting (KDLS)** | ❌ | ✔ |
+| **Automated System Tray Boot** | ❌ | ✔ |
+| **Nagle's TCP Transmission Disabling**| ❌ | ✔ |
+| **Force HAGS API Scheduling** | ❌ | ✔ |
 
 ---
-*Developed by LIFT Esports & MintyLiteralGod. For storefront processing or support inquiries, navigate to the [Official Web Portal](http://reflexcore.xyz).*
+
+## 📦 Installation & Deployment
+
+### Official Executable Build
+Get the verified standalone package from our server path:
+
+👉 **[Download ReflexCore Setup v1.2.5 (.exe)](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/OFFICIALRELEASE1.2.2/ReflexCore_Setup_v1.2.5.exe)**
+
+### Compiling Natively via CLI
+If you prefer auditing and compiling the project from its base files manually:
+
+1. Navigate directly to your local repository directory:
+   ```cmd
+   cd C:\Path\To\ReflexCoreFree
