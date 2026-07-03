@@ -1,22 +1,42 @@
-#⚡ ReflexCore | Win32 Subsystem & Hot-Plug Hardware Optimization Engine
+# ⚡ ReflexCore | Win32 Subsystem & Hot-Plug Hardware Optimization Engine
 
-ReflexCore is a high-performance, asynchronous Win32 subsystem manipulation and registry optimization engine compiled in C# for the .NET 7.0 framework. The utility is engineered to execute granular overrides within the Windows NT Kernel Scheduler, reallocate Deferred Procedure Call (DPC) queue workloads, adjust the Ancillary Function Driver (AFD) socket stack, and enforce immediate, system-wide presentation layer changes.
+**ReflexCore** is a high-performance, asynchronous Win32 subsystem manipulation and registry optimization engine compiled in **C#** for the **.NET 7.0 framework**. The utility is engineered to execute granular overrides within the Windows NT Kernel Scheduler, reallocate Deferred Procedure Call (DPC) queue workloads, adjust the Ancillary Function Driver (AFD) socket stack, and enforce immediate, system-wide presentation layer changes.
 
-Unlike crude, single-threaded system configuration scripts that freeze the host machine or require constant operating system reboots to evaluate values, ReflexCore leverages a fully asynchronous processing pipeline (Task.Run). It coordinates live Win32 API sub-system broadcasts with targeted hot-plug PowerShell hardware resets to apply low-latency optimizations instantaneously in volatile memory.
+Unlike crude, single-threaded system configuration scripts that freeze the host machine or require constant operating system reboots to evaluate values, ReflexCore leverages a fully asynchronous processing pipeline (`Task.Run`). It coordinates live Win32 API sub-system broadcasts with targeted hot-plug PowerShell hardware resets to apply low-latency optimizations instantaneously in volatile memory.
 
-Intrusive kernel-level anti-cheat modules—including Riot Vanguard, BattlEye, Easy Anti-Cheat (EAC), and FACEIT AC—explicitly whitelist user-mode registry manipulation and native Win32 API loops, making ReflexCore 100% anti-cheat compliant across all competitive platforms.
+Intrusive kernel-level anti-cheat modules—including Riot Vanguard, BattlEye, Easy Anti-Cheat (EAC), and FACEIT AC—explicitly whitelist user-mode registry manipulation and native Win32 API loops, making ReflexCore **100% anti-cheat compliant** across all competitive platforms.
 
 📥 [**Download Verified Production Release v1.3.0 (Windows Installer)**](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/1.3.0/ReflexCore_Setup_v1.3.0.exe)
 
+---
+
+## 📊 Subsystem Feature Matrix (Free vs. Pro Suite)
+
+| Optimization Subsystem Node | Free Edition | Pro Suite Suite | Operational Pipeline State |
+| :--- | :---: | :---: | :--- |
+| **0.5ms NT Timer Resolution** | ✅ | ✅ | Live API Injection (`ntdll.dll`) |
+| **Multimedia Thread Priority Lock** | ✅ | ✅ | Active Memory Session (`winmm.dll`) |
+| **Heuristic Working Set RAM Flush** | ✅ | ✅ | Async Watchdog Loop (`psapi.dll`) |
+| **DNS & Temp Directory Sanitation** | ✅ | ✅ | Instant Subprocess Invoke |
+| **Network Throttling Index Bypass** | ❌ | ✅ | Live Adapter Stack Refresh |
+| **TcpNoDelay (Nagle's Disable)** | ❌ | ✅ | Live Adapter Stack Refresh |
+| **Kernel DPC Core Shunting (KDLS)** | ❌ | ✅ | Hot-Plug USB Host Controller Reset |
+| **Tournament Kiosk Mode** | ❌ | ✅ | Dynamic `explorer.exe` Assassin Loop |
+| **Global Presentation FSO Bypass** | ❌ | ✅ | Immediate Registry Hive Intercept |
+| **Full Telemetry (DiagTrack) Deletion** | ❌ | ✅ | Active Memory Service Kill |
+| **Custom Visual Engine Themes** | ❌ | ✅ | Local Token Configuration Decode |
+
+---
+
 ## 🧭 System Intercept Matrix & Execution Model
-Plaintext
+
+```
  [ Click: START OPTIMIZATION ]
                |
                v
  [ Async Pipeline Initialized ] ---> UI Thread Remains Responsive (0ms Freeze)
                |                     Button States Flip to "INJECTING HOOKS..."
                v
-```
  +-------------------------------------------------------------------------+
  |                      BACKGROUND THREAD EXECUTION POOL                   |
  +-------------------------------------------------------------------------+
@@ -48,12 +68,12 @@ Plaintext
                            |
                            +---> [ NO ]  ---> Finalizes Run -> Flips Button to STOP State
 ```
-⚙️ Granular Engine Architecture & API Specifications
-1. Asynchronous Execution Pipeline (Task.Run)
+# ⚙️ Granular Engine Architecture & API Specifications
+### 1. Asynchronous Execution Pipeline (Task.Run)
 Executing physical hardware lifecycle commands synchronously on the primary application thread creates severe thread starvation. When Windows waits for an external sub-process (like a shell re-initialization or driver reset) to yield, the User Interface (UI) message loop (WndProc) locks up completely, forcing the operating system to flag the application as "Not Responding."
 
 ReflexCore neutralizes this design flaw by abstracting the entire optimization sequence inside a non-blocking asynchronous task wrapper:
-```
+
 C#
 btnEngage.Click += async (s, e) => {
     if (!isOptimized) {
@@ -72,11 +92,11 @@ UI Responsiveness: When a user initializes the pipeline, the master button contr
 
 Thread Distribution: The execution block is dynamically pushed off the UI thread and scheduled onto the background thread pool via Task.Run(), allowing the real-time execution logger to paint diagnostic updates on screen smoothly without a single millisecond of interface hanging.
 
-2. High-Precision NT Timer Alignment
+### 2. High-Precision NT Timer Alignment
 The standard Windows NT kernel scheduler clock structures thread priority allocations around a default quantizing tick rate of 15.625 milliseconds to limit standby processing draw on mobile devices. On high-refresh-rate desktop displays (144Hz–600Hz), this massive interval variance skews frame presentation timings, resulting in thread block misalignment and acute mouse cursor drift.
 
 ReflexCore establishes precise sub-millisecond thread timing alignment by combining explicit undocumented NT functions with legacy Multimedia timing layers:
-
+```
 C#
 [DllImport("ntdll.dll", SetLastError = true)]
 private static extern int NtSetTimerResolution(uint DesiredResolution, bool SetResolution, out uint CurrentResolution);
@@ -84,34 +104,32 @@ private static extern int NtSetTimerResolution(uint DesiredResolution, bool SetR
 [DllImport("winmm.dll", EntryPoint = "timeBeginPeriod", SetLastError = true)]
 public static extern uint TimeBeginPeriod(uint uPeriod);
 The Pipeline Method: The engine issues a low-level call to NtSetTimerResolution, requesting a DesiredResolution value of exactly 5000 (computed in 100-nanosecond blocks, establishing a strict 0.5ms scheduling resolution ceiling).
-
 ```
-
 The Intercept Failsafe: Because Windows will automatically restore default timer bounds if an executing thread enters a sleep or yield state, ReflexCore simultaneously runs TimeBeginPeriod(1) to anchor the Multimedia Class Scheduler Service (MMCSS). This forces the Windows kernel scheduler to recalculate and dispatch thread blocks exactly every 0.5ms without dropouts.
 
-3. User32 Input Subsystem Optimization (Live 1:1 Parity)
+### 3. User32 Input Subsystem Optimization (Live 1:1 Parity)
 Standard registry scripts that modify mouse tracking behavior try to change the coordinate matrix curves via deep Control Panel\Desktop hex strings. However, the native Windows desktop windowing subsystem only loads these registry configuration hives during user log-in cycles. Altering them via standard tools does absolutely nothing to your current active session unless you manually log out or reboot.
 
 ReflexCore bypasses this limitation by coupling deep registry configurations with an instantaneous live subsystem parameter broadcast:
-
+```
 C#
 [DllImport("user32.dll", SetLastError = true)]
 [return: MarshalAs(UnmanagedType.Bool)]
 public static extern bool SystemParametersInfo(uint uiAction, uint uiParam, int[] pvParam, uint fWinIni);
 Immediate Implementation: When RawMouseInput is flagged, the application directly alters MouseSpeed, MouseThreshold1, and MouseThreshold2 strings inside the active registry configuration path.
-
+```
 Subsystem Re-Read Enforcement: The application immediately pushes an array map of { 0, 0, 0 } directly into the User32 layout manager via SystemParametersInfo(SPI_SETMOUSE, 0, mouseParams, SPIF_UPDATEINIFILE | SPIF_SENDCHANGE). This forces the kernel's active display thread to instantly re-read the configuration hive and tear down mouse smooth filtering live, granting the user immediate raw 1:1 cursor translation without forcing a log-out sequence.
 
-4. Bulletproof Process Whitelisting & Memory Sanitation
+### 4. Bulletproof Process Whitelisting & Memory Sanitation
 Standard system memory dumpers or "RAM cleaners" crash essential operating system background trees because they indiscriminately force execution pages out of physical RAM chips. ReflexCore implements a protected heuristic process evaluation grid that safely preserves background task continuity.
 
 The engine maintains a hardened string map hash table whitelisting priority utility handles (e.g., discord, spotify, teamspeak, guilded, steamwebhelper, nvcontainer, explorer, taskmgr, reflexcore, reflexcorefree), your explicit game targets, and core system nodes (explorer, taskmgr). The watchdog thread spins every 5 seconds, capturing active process maps and invoking a clean Win32 API flush via psapi.dll:
-
+```
 C#
 [DllImport("psapi.dll")]
 public static extern int EmptyWorkingSet(IntPtr hwProc);
 Deep Engine Aware Safeguard: To guarantee that crucial user software is never accidentally disrupted, the application evaluates active process structures using a deep engine folder traversal path (\steamapps\, \riot games\, \epic games\, etc.).
-
+```
 DLL Fingerprinting: If a background process path isn't identified, the app scans its execution folder for 13 distinct game architecture signature dependencies (including UnityPlayer.dll, steam_api64.dll, bink2w64.dll, fmodstudio.dll, and EOSSDK-Win64-Shipping.dll). If any game fingerprint matches, the process is skipped automatically. If it's a generic application handle, EmptyWorkingSet is applied, forcing the NT memory manager to cleanly move dead execution pages to page-file swap nodes, instantly recovering clean blocks of physical memory for your game.
 
 # 👑 Pro Suite Systems: Live Hardware Device Layer Modification
@@ -119,7 +137,7 @@ The ReflexCore Pro Suite interfaces with specialized Windows hardware classes an
 
 Provision a Cryptographic Pro Key via the Web Portal to unlock advanced hardware device layer parameters:
 
-🔬 Live Kernel DPC Lane Shunting (KDLS via PowerShell Hot-Plug)
+# 🔬 Live Kernel DPC Lane Shunting (KDLS via PowerShell Hot-Plug)
 High-polling gaming peripherals operating at 4,000Hz or 8,000Hz throw massive amounts of Interrupt Requests (IRQs) at the CPU every second. Windows schedules these hardware calls to be handled by Core 0 and Core 1 by default. Because your game's frame processing code and rendering cycles rely heavily on those identical primary cores, your CPU undergoes constant severe context-switching latency, resulting in input drops and erratic frame times.
 
 Ini, TOML
@@ -139,11 +157,11 @@ The default configuration of the Microsoft TCP/IP stack enforces Nagle’s Algor
 Adapter Traversal: ReflexCore Pro locates your network interface keys inside SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318} and Tcpip\Parameters\Interfaces. It targets every active network adapter GUID on your motherboard and injects TcpAckFrequency = 1 and TCPNoDelay = 1.
 
 Live Network Refresh: To force the operating system to immediately compile and run these new network routing matrices without a PC restart, the Pro pipeline invokes an integrated PowerShell network lifecycle hook:
-
+```
 PowerShell
 Restart-NetAdapter -Name '*' -Confirm:$false
 This live command forces all active network adapters to disconnect and immediately re-initialize their socket configurations. The entire network adapter routing table is refreshed live in 3 seconds, disabling delayed-ACK and guaranteeing instant, jitter-free transmission of game packets.
-
+```
 # 🎭 Dynamic Tournament Kiosk Mode
 Even when minimized or backgrounded, the native Windows desktop environment framework (explorer.exe) frequently checks for updates to system tray notification icons, layout positions, taskbar widgets, and Windows background scaling.
 
@@ -178,7 +196,7 @@ if (requiresReboot) {
     }
 }
 ```
-The features that trigger this staged reboot prompt are:
+### The features that trigger this staged reboot prompt are:
 
 Disable OS Dynamic Ticks: Runs bcdedit.exe /set disabledynamictick yes. This stops the Windows kernel from putting unused CPU cores into low-power sleep states, which minimizes thread wake-up latency but requires a clean boot to modify the bootloader configuration.
 
@@ -187,7 +205,7 @@ Hardware-Accelerated GPU Scheduling (HAGS): Sets the registry parameter HwSchMod
 # 📥 Deployment & Operational Walkthrough
 Because ReflexCore directly interfaces with system hardware registers and writes to secured HKEY_LOCAL_MACHINE registry hives, the application strictly requires Administrator privileges.
 
-Download the production setup package [ReflexCore_Setup_v1.3.0.exe.](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster/releases/download/1.3.0/ReflexCore_Setup_v1.3.0.exe)
+Download the production setup package ReflexCore_Setup_v1.3.0.exe.
 
 Run the installer. It will automatically request UAC escalation, map your architecture parameters, and install your files to {autopf}\LIFT Esports\ReflexCore.
 
@@ -199,7 +217,8 @@ Pro Activation Layer: If you have acquired a lifetime license key via Polar.sh, 
 
 Navigate to the Tweaks panel, choose your optimization preferences, and return to the dashboard to click START OPTIMIZATION. The asynchronous engine will apply your chosen tweaks safely in the background.
 
-## 📁 Configuration Note: All custom whitelists, game strings, toggle states, and visual preferences are written to a localized flat-file called "reflexcore.cfg" in the app directory. Deleting this file completely ## purges the application's local footprint and resets all settings to their original factory defaults.
+
+📁 Configuration Note: All custom whitelists, game strings, toggle states, and visual preferences are written to a localized flat-file called "reflexcore.cfg" in the app directory. Deleting this file completely purges the application's local footprint and resets all settings to their original factory defaults.
 💻 Technical Build & Compiler Reference
 For system administrators, tournament managers, or engineers looking to build or audit the source binary directly from code:
 
@@ -211,10 +230,10 @@ Development Environment: Visual Studio 2022 or JetBrains Rider.
 Desktop Tools: Ensure the "Desktop Development with C#" workload is checked in your compiler settings to bundle the necessary WinForms rendering structures.
 
 Navigate to your local repository folder and run this build profile:
-
+```
 Bash
 # Clone the master source code tree from GitHub
-git clone https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster.git
+git clone [https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster.git](https://github.com/MintyLiteralGod/ReflexCore-FPS-Booster.git)
 
 # Move into the project root directory
 cd ReflexCore-FPS-Booster
@@ -224,7 +243,8 @@ dotnet restore
 
 # Publish a fully optimized, single self-contained application binary
 dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishReadyToRun=true -p:IncludeNativeLibrariesForSelfExtract=true
-⚠️ System Integrity & Subsystem Disclaimer
+```
+# ⚠️ System Integrity & Subsystem Disclaimer
 ReflexCore modifies vital core network routing pipelines, PCIe link-state registers, thread priority distribution matrixes, and kernel scheduling parameters. Although a clean shutdown routine is integrated into the system to gracefully restore default parameters when you close the application, running these optimizations naturally pushes your physical components to higher sustained processing thresholds and overrides thermal/power management safety ceilings.
 
-The developer assumes no responsibility or liability for hardware degradation, file system anomalies, or operational instability resulting from the deployment of these configurations. Use at your own risk.
+# The developer assumes no responsibility or liability for hardware degradation, file system anomalies, or operational instability resulting from the deployment of these configurations. Use at your own risk. 
