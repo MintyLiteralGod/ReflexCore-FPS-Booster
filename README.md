@@ -15,7 +15,7 @@ ReflexCore is a low-level, deep-system performance optimization tool engineered 
 
 ReflexCore is distributed in two operational tiers. The **Free** tier handles safe, baseline file-system and OS clock adjustments. The **Pro Suite** requires cryptographic node activation and drops low-level hardware constraints to handle raw, unthrottled 8K packet routing, core isolation, and dynamic memory purging.
 
-# 👑 **[SECURE YOUR LIFE-TIME PRO SUITE NODE KEY HERE]** (Apply coupon code **`REFLEX99`** at checkout to unlock your lifetime discount rate of **$9.99** instead of the retail $14.99).
+# 👑 **[SECURE YOUR LIFE-TIME PRO SUITE NODE KEY HERE](https://reflexcore.xyz) ** (Apply coupon code **`REFLEX99`** at checkout to unlock your lifetime discount rate of **$9.99** instead of the retail $14.99).
 
 | System Optimization Module | Target Subsystem / Win32 API | Free Baseline | ⭐ Pro Suite |
 | :--- | :--- | :---: | :---: |
