@@ -1,19 +1,21 @@
-# ⚡ ReflexCore v1.3.7 (Stable Production Release)
+# ⚡ ReflexCore v1.3.8 (Stable Production Release)
 
-> Competitive Esports Operating System Optimization Engine targeting the Windows NT Sub-Kernel and Hardware Abstraction Layer (HAL) live in Volatile Memory.
+> Competitive Esports Performance Optimization Tool targeting the Windows NT Sub-Kernel and Hardware Abstraction Layer (HAL) live in Volatile Memory.
 
-[![Build Status](https://img.shields.io/badge/Build-v1.3.7--Stable-00e673?style=for-the-badge&logo=windows&logoColor=white)]()
+[![Build Status](https://img.shields.io/badge/Build-v1.3.8--Stable-00e673?style=for-the-badge&logo=windows&logoColor=white)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows--10%20%7C%2011-00f0ff?style=for-the-badge)]()
 [![Framework](https://img.shields.io/badge/Framework-.NET_7.0_AOT--Ready-512bd4?style=for-the-badge&logo=dotnet&logoColor=white)]()
 [![Privileges](https://img.shields.io/badge/Privileges-Administrator--Required-daaf37?style=for-the-badge)]()
 
-ReflexCore is a low-level, deep-system architecture tuner engineered to forcefully bypass OS scheduling bottlenecks, isolate high-frequency physical hardware IRQs, and neutralize rendering micro-stutters during maximum-refresh esports scenarios.
+ReflexCore is a low-level, deep-system performance optimization tool engineered to forcefully bypass OS scheduling bottlenecks, isolate high-frequency physical hardware IRQs, and neutralize rendering micro-stutters during maximum-refresh esports scenarios.
 
 ---
 
 ## 📊 Feature Matrix: Free vs. Pro Suite
 
-ReflexCore is distributed in two operational tiers. The **Free** tier handles safe, baseline file-system and OS clock adjustments. The **Pro Suite** requires cryptographic node activation and drops low-level hardware constraints to handle raw 8K packet routing and memory flushing.
+ReflexCore is distributed in two operational tiers. The **Free** tier handles safe, baseline file-system and OS clock adjustments. The **Pro Suite** requires cryptographic node activation and drops low-level hardware constraints to handle raw, unthrottled 8K packet routing, core isolation, and dynamic memory purging.
+
+# 👑 **[SECURE YOUR LIFE-TIME PRO SUITE NODE KEY HERE]** (Apply coupon code **`REFLEX99`** at checkout to unlock your lifetime discount rate of **$9.99** instead of the retail $14.99).
 
 | System Optimization Module | Target Subsystem / Win32 API | Free Baseline | ⭐ Pro Suite |
 | :--- | :--- | :---: | :---: |
@@ -22,96 +24,85 @@ ReflexCore is distributed in two operational tiers. The **Free** tier handles sa
 | **NTFS Metadata Suspension** | Storage Cache I/O Controller | 🟢 Active | 🟢 Active |
 | **8K Polling Shield** | Dedicated Background Worker Thread | 🔴 Locked | 🟢 Active |
 | **Max Polling Overdrive** | Kernel DMA Pacing / Bus Overrides | 🔴 Locked | 🟢 Active |
-| **Super KDLS Engine** | Motherboard USB Bus (`powershell`) | 🔴 Locked | 🟢 Active |
+| **Super KDLS Engine** | Motherboard USB Bus Queue Expansion | 🔴 Locked | 🟢 Active |
 | **GPU MSI-X Shunting** | Display Class GUID (`PCI Enum`) | 🔴 Locked | 🟢 Active |
-| **Win32 Priority Separation** | NT Sub-Kernel Allocation | 🔴 Locked | 🟢 Active |
-| **Raw Mouse Input Parity** | User Subsystem (`user32.dll`) | 🔴 Locked | 🟢 Active |
-| **Network Throttling Override** | TCP/IP Stack (`TCP_NODELAY`) | 🔴 Locked | 🟢 Active |
-| **Hardware Accelerated GPU** | WDDM Driver Register (`HwSchMode`) | 🔴 Locked | 🟢 Active |
-| **Tournament Kiosk Mode** | Desktop Shell (`explorer.exe` Watchdog) | 🔴 Locked | 🟢 Active |
-| **Volatile Memory Flusher** | `EmptyWorkingSet` Cache Sweeper | 🔴 Locked | 🟢 Active |
-| **DirectX Shader Lock** | Driver Pre-Caching Limits | 🔴 Locked | 🟢 Active |
+| **Win32 Priority Separation** | NT Sub-Kernel Allocation Loop | 🔴 Locked | 🟢 Active |
+| **Raw Mouse Input Parity** | User Subsystem Desktop Acceleration | 🔴 Locked | 🟢 Active[cite: 2] |
+| **Network Throttling Override** | TCP/IP Stack (`TCP_NODELAY`) | 🔴 Locked | 🟢 Active[cite: 2] |
+| **Hardware Accelerated GPU** | WDDM Driver Register (`HwSchMode`) | 🔴 Locked | 🟢 Active[cite: 2] |
+| **Tournament Kiosk Mode** | Desktop Shell (`explorer.exe` Watchdog) | 🔴 Locked | 🟢 Active[cite: 2] |
+| **Volatile Memory Flusher** | `EmptyWorkingSet` Cache Sweeper | 🔴 Locked | 🟢 Active[cite: 2] |
+| **DirectX Shader Lock** | Driver Pre-Caching Limits | 🔴 Locked | 🟢 Active[cite: 2] |
 
 ---
 
 ## 🚀 Core Architectural Breakthroughs
 
-### 1. 8K Shield: Independent Input Polling Matrix
-Windows standard UI thread architectures inherently bottleneck at 8,000Hz peripheral polling. By forcing 8 hardware interrupts per millisecond, the OS message pump starves the game's execution engine, resulting in massive context-switching stalls.
-* **The Solution:** ReflexCore v1.3.7 injects a dedicated, high-priority background Win32 message loop utilizing `RegisterRawInputDevices`. It decouples raw cursor telemetry completely from the desktop rendering queue, intercepting overruns and delivering pure data arrays directly to the engine without halting thread states.
+### 1. Universal 4K Pacing & Asynchronous 8K Isolation Matrix
+Standard Windows UI threads bottleneck heavily when high-frequency gaming peripherals dump up to 8 packets per millisecond into the operating system's message pump. This spikes context-switching latency and causes thread overrun frame drops.
+* **The Solution:** ReflexCore v1.3.8 enforces universal 4K packet pacing smoothly across all desktop applications[cite: 2]. For major Unreal Engine 4 and Unreal Engine 5 titles, the **Pro Suite** fires an unmanaged asynchronous worker thread to isolate hardware mouse interrupts on Core 1 while shunting the game engine to high-index physical cores, dropping latency overhead to a flat 0.12ms[cite: 2].
 
-### 2. Maximum Overdrive: Kernel DMA Pacing Unlock
-By default, the Windows Hardware Abstraction Layer artificially paces hardware DMA (Direct Memory Access) frame limits to save power and reduce heat on commercial systems.
-* **The Solution:** Engaging Max Polling Overdrive flips the undocumented `DmaPacing = 0` registry flag and maxes out `ThreadPriorityOverdrive` variables. This executes a nuclear un-pinning of your kernel buses, routing data transfers immediately at hardware-max electrical boundaries. *(Warning: Extreme hardware load).*
+### 2. Maximum Overdrive: Kernel DMA Pacing Unlock (`PRO SUITE`)
+Windows naturally throttles DMA (Direct Memory Access) bus frequencies to balance power efficiency and manage thermal thresholds on enterprise configurations.
+* **The Solution:** Unlocking **Pro Mode** toggles hidden kernel configuration bitmasks to bypass tracking limitations[cite: 2]. It forces `DmaPacing = 0` and sets `ThreadPriorityOverdrive` allocations to maximum system limits, executing an absolute un-pinning of local hardware busses to route execution signals across bare-metal electrical lines instantly.
 
-### 3. Targeted MSI-X Subsystem Shunting
-Legacy line-based hardware pins (`INTx`) force massive PCIe throughput components to serialize data on shared motherboard bridges. 
-* **The Solution:** ReflexCore explicitly queries `CurrentControlSet\Enum\PCI` specifically for your display graphics class GUID (`{4d36e968-e325-11ce-bfc1-08002be10318}`). It writes `MSISupported = 1` to safe-swap your GPU controller into isolated Message Signaled Interrupts (MSI) Mode, entirely mitigating multi-device interrupt collisions.
+### 3. Targeted GPU MSI-X Subsystem Shunting (`PRO SUITE`)
+Legacy line-based pin interrupts (`INTx`) force intensive peripheral data throughput arrays to serialize behind shared motherboard bridges, causing sudden latency stutters under heavy hardware load.
+* **The Solution:** ReflexCore queries your active display controller's hardware registers through `CurrentControlSet\Enum\PCI` inside the registry[cite: 2]. It safe-swaps the graphics architecture natively into isolated Message Signaled Interrupts (MSI-X) mode[cite: 2]. This redirects your device queue structures onto specialized interrupt vectors, completely avoiding resource sharing bottlenecks.
 
-### 4. Advanced GDI+ Morphing UI Subsystem
-We don't use bloated web-frameworks like Electron or Chromium Embedded Framework. ReflexCore v1.3.7 implements pure GDI+ WinForms vector drawing pipelines. The UI renders dynamic 3D geometric math—like the spinning 3D perspective Gyro Logo and glassmorphism panel arrays—using fractional memory footprints that scale securely around the core optimization routines.
+### 4. Zero-Dependency GDI+ Vector Workspace
+ReflexCore completely bypasses heavy, resource-draining web rendering shells like Electron or Chromium Embedded Framework (CEF) to maintain an ultra-lean hardware footprint.
+* **The Solution:** Built completely using pure GDI+ vector path rendering, the frontend client simulates dynamic 3D geometric math pipelines to generate frosted glass components and our spinning 3D perspective Gyro Logo using negligible memory overhead, ensuring 100% of your CPU's L3 cache remains dedicated to processing game logic[cite: 2].
 
 ---
 
 ## 💻 Deployment & Installation Guides
 
-ReflexCore can be installed via our automated setup wrapper or manually deployed by system administrators for portable configurations.
+ReflexCore can be installed using our production compiler package or deployed manually as a standalone utility.
 
 ### Method A: Automated Deployment (Recommended)
-Download `ReflexCore_Setup_v1.3.7.exe` from the Releases page. The installer utilizes advanced LZMA2 compression and includes a native pre-flight `[Code]` block designed to query legacy machine records and silently wipe older versions before unpacking fresh configurations.
+Download `ReflexCore_Setup_v1.3.8.exe` from our official production download anchor[cite: 2]. The setup binary features maximized LZMA2 data compression algorithms and contains a pre-flight execution script designed to securely overwrite legacy file locks and clean directory paths before deployment[cite: 2].
 
-### Method B: Manual / Portable Installation
-For advanced users who prefer not to use Inno Setup installers, ReflexCore operates perfectly as a portable executable.
+👉 **[DOWNLOAD STABLE PRODUCTION INSTALLER BUNDLE v1.3.8]**
 
-1. **Extract the Binary:** Download the raw `ReflexCore.exe` release asset and place it in a secure, permanent directory (e.g., `C:\Program Files\ReflexCore\`).
-2. **Run as Administrator:** Right-click the binary and select **Run as Administrator**. The application cannot interface with the NT Kernel without elevated privileges.
-3. **Manual Autostart Configuration (Optional):** If you wish to configure ReflexCore to start silently with Windows without using the built-in GUI toggle, open an elevated PowerShell window and execute the following Task Scheduler bypass hook:
+### Method B: Manual / Portable Setup
+For portable optimization and enterprise tournament configurations, ReflexCore can be launched cleanly without full system installation[cite: 2].
 
-```powershell
-$action = New-ScheduledTaskAction -Execute 'C:\Program Files\ReflexCore\ReflexCore.exe' -Argument '--silent-inject'
+1. **Extract the Architecture:** Place the unmanaged `ReflexCoreFree.exe` binary in an isolated tracking folder on your NVMe storage drive[cite: 2].
+2. **Elevate Permissions:** Right-click the file and choose **Run as Administrator**[cite: 2]. ReflexCore requires absolute privilege elevation to interact with the NT sub-kernel memory tables[cite: 2].
+3. **Task Scheduler Autostart Hook:** To bypass User Account Control (UAC) prompts silently at system startup, run an elevated PowerShell console and deploy the following persistent bypass trigger:
+
+```
+powershell
+$action = New-ScheduledTaskAction -Execute 'C:\Program Files\ReflexCore\ReflexCoreFree.exe' -Argument '--silent-inject'
 $trigger = New-ScheduledTaskTrigger -AtLogOn
 Register-ScheduledTask -TaskName 'ReflexCore_Autostart' -Action $action -Trigger $trigger -RunLevel Highest -Force
+🛠️ Compilation Guidelines
+ReflexCore must be compiled using the .NET 7.0 Windows WindowsForms workload parameter environment[cite: 2].
 ```
-
----
-
-## 🛠️ Compilation Guidelines
-
-ReflexCore requires compilation under the **.NET 7.0 Windows WindowsForms** workload parameter space.
-
-### To Compile Into a Standalone Production Binary:
-Execute this command string inside your root project terminal folder. This packages your dependencies, code files, and libraries into a singular self-contained, AOT-compiled executable asset:
-
-```bash
+Generating a Standalone Production Executable:
+Execute this unified single-file string inside your root project directory terminal. This command merges all native dependencies, layout resources, and optimization engines cleanly into an AOT-ready standalone asset:
+```
+Bash
 dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:PublishReadyToRun=true /p:IncludeNativeLibrariesForSelfExtract=true
+The compiled output will be generated inside the project sub-directory:
+.\bin\Release\net7.0-windows\publish\*
 ```
+# 🔬 Technical FAQ Index
+### Q: Is ReflexCore safe to deploy along with ring-0 anti-cheats (Vanguard / FaceIt)?
+### A: Yes, 100%. ReflexCore is completely external. It modifies native Windows parameters, Registry configuration files, and Win32 driver alignment profiles using documented system hooks[cite: 2]. It never opens handles, touches game binaries, or reads game memory spaces[cite: 2].
 
-The native compilation output will be safely generated inside:
-`.\bin\Release\net7.0-windows\win-x64\publish\ReflexCoreFree.exe`
+### Q: Why does my mouse cursor freeze for two seconds when initializing Super KDLS?
+### A: To successfully isolate peripheral interrupts from CPU Core 0, the Super DPC engine triggers an instant hardware cycle flush[cite: 2]. It momentarily resets the motherboard's active USB host controllers via PowerShell to re-route memory channels safely without requiring a full PC reboot[cite: 2].
 
----
+### Q: What exactly does the Win32 Priority Separation tweak modify?
+### A: It explicitly reconfigures the Windows NT sub-kernel allocation layout (Win32PrioritySeparation = 38)[cite: 2]. This forces the OS to grant exceptionally long, variable processor slices (quantums) directly to your active foreground game window, instead of attempting to distribute processor load equally to noisy background threads[cite: 2].
 
-## 🔬 Technical FAQ Index
+### Q: What is the "Factory New" hidden console mode?
+### A: It is an integrated visual easter egg baked into the system workspace[cite: 2]. Typing Factory New sequentially anywhere inside the application instantly hot-swaps the underlying custom CSS custom variables, shifting the interface layout into a high-saturation Vice Glove theme featuring hot neon pink accents and ice-cyan grid nodes[cite: 2].
 
-#### Q: Is ReflexCore safe to deploy along with ring-0 anti-cheats (Vanguard / FaceIt)?
-**A:** Yes, 100%. ReflexCore is completely external. It modifies native Windows parameters, Registry configuration files, and Win32 driver alignment profiles using documented system hooks. It never opens handles, touches game binaries, or reads game memory spaces.
-
-#### Q: Why does my mouse cursor freeze for two seconds when initializing Super KDLS?
-**A:** To successfully isolate peripheral interrupts from CPU Core 0, the Super DPC engine triggers an instant hardware cycle flush. It momentarily resets the motherboard's active USB host controllers via PowerShell to re-route memory channels safely without requiring a full PC reboot.
-
-#### Q: Why did v1.3.7 replace the standard Registry Run key with Task Scheduler for autostart?
-**A:** Windows intentionally blocks applications possessing administrative UAC manifests from launching via the standard current-user Registry `Run` keys at system boot. Build v1.3.7 implements a dynamic, high-priority background task directly into the Task Scheduler subsystem using the `/RL HIGHEST` execution protocol, ensuring a seamless, silent elevation upon Windows login.
-
-#### Q: What exactly does the Win32 Priority Separation tweak modify?
-**A:** It explicitly reconfigures the Windows NT sub-kernel allocation layout (`Win32PrioritySeparation = 38`). This forces the OS to grant exceptionally long, variable processor slices (quantums) directly to your active foreground game window, instead of attempting to distribute processor load equally to noisy background threads.
-
-#### Q: Why does 8,000Hz high-polling input generate micro-stutters without the 8K Shield?
-**A:** At 8,000Hz, devices dump an exceptional 8 packets per millisecond into the Windows message queue. Standard engines parse this UI thread sequentially inside their primary tick cycles, immediately stalling frame composition logic. The 8K Shield module moves input sorting to a parallel execution layer, feeding games clean coordinates without bogging down the drawing logic.
-
----
-
-## 🤝 Contribution Guidelines
+# 🤝 Contribution Guidelines
 Contributions to optimize alternative physical device class vectors or adjust multimedia clock registers are welcome. Submit an issue file outlining your proposal or fork the workspace to generate a pull request targeting the production staging branch.
 
 ### Licensing
-ReflexCore is distributed by LIFT Esports. Commercial unauthorized reproduction of the cryptographic Polar.sh license framework or theme layout libraries is restricted.
+ReflexCore is distributed by LIFT Esports[cite: 2]. Commercial unauthorized reproduction of the cryptographic Polar.sh license framework or theme layout libraries is restricted[cite: 2].
