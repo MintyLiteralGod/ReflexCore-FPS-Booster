@@ -1,3 +1,14 @@
+
+# REFLEXCORE IS CURRENTLY UNAVAILABLE DUE TO SECURITY CONCERNS, BE UP SOON  PREPARE FOR 1.4.0
+
+
+
+
+
+
+
+
+
 # ⚡ ReflexCore v1.3.8 (Stable Production Release)
 
 > Competitive Esports Performance Optimization Tool targeting the Windows NT Sub-Kernel and Hardware Abstraction Layer (HAL) live in Volatile Memory.
