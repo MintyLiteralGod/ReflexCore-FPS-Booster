@@ -1,4 +1,4 @@
-# ReflexCore Free v1.3.8
+# ReflexCore v1.3.8
 
 Windows performance toolkit for competitive play — timer resolution, input isolation, network tweaks, and 8K polling support. Built for WinForms on .NET 8 (`net8.0-windows`, win-x64).
 
