@@ -141,5 +141,5 @@ Deploy the contents of `ReflexCore-Web/` to the host for [reflexcore.xyz](https:
 
 ## License / publisher
 
-Installer publisher: **Lift Engineering**  
+Installer publisher: **Lift Development Solutions**  
 Product: **ReflexCore** · Version **1.3.8**
