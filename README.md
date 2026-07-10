@@ -1,145 +1,188 @@
-# ReflexCore v1.3.8
+<p align="center">
+  <img src="ReflexCore-Web/reflex.ico" alt="ReflexCore" width="72" height="72" />
+</p>
 
-Windows performance toolkit for competitive play — timer resolution, input isolation, network tweaks, and 8K polling support. Built for WinForms on .NET 8 (`net8.0-windows`, win-x64).
+<h1 align="center">REFLEXCORE</h1>
 
-**Website:** [https://reflexcore.xyz/](https://reflexcore.xyz/)  
-**Buy Pro:** [https://reflexcore.xyz/#pro](https://reflexcore.xyz/#pro) · Polar checkout (code `REFLEX99`)  
-**Discord:** [https://discord.gg/34pCtCpQJv](https://discord.gg/34pCtCpQJv)
+<p align="center">
+  <strong>Windows performance orchestration for competitive gaming.</strong><br/>
+  Kill micro-stutter. Isolate 8K input. Boost foreground play — without injecting into games.
+</p>
 
----
+<p align="center">
+  <a href="https://reflexcore.xyz"><img src="https://img.shields.io/badge/Website-reflexcore.xyz-00e673?style=for-the-badge" alt="Website" /></a>
+  <a href="https://reflexcore.xyz/#pro"><img src="https://img.shields.io/badge/Pro-REFLEX99-d1b464?style=for-the-badge" alt="Pro" /></a>
+  <a href="https://discord.gg/34pCtCpQJv"><img src="https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
 
-## Requirements
-
-- Windows 10/11 x64
-- Administrator privileges (affinities, registry, power plans, scheduled tasks)
-- .NET 8 SDK to build from source
-
----
-
-## Free features
-
-| Feature | What it does |
-|--------|----------------|
-| **Disable OS Dynamic Ticks** | Stops CPU sleep/clock throttling via `bcdedit` dynamic tick control |
-| **Optimize Thread Priority** | Raises multimedia / hardware polling responsiveness |
-| **Disable NTFS Access Stamps** | Cuts drive I/O from last-access timestamp updates on game folders |
-| **Quick actions** | Flush DNS, wipe temp files, restart Explorer |
-| **Game executable targets** | Track which `.exe` names get raw-input / affinity focus |
-| **Live telemetry strip** | Input delta, DWM raw-input state, thread pacing, hardware state |
-| **Stable presets** | One-click baseline toggle set for Free |
-| **Run on startup** | Elevated Task Scheduler entry (`ReflexCoreStartupTask`) |
-| **System tray** | Minimize to tray while optimization is active |
-| **License tab** | Activate a Pro key or open the purchase page |
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.5.0-ff0040?style=flat-square" alt="v1.5.0" />
+  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078d4?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/.NET-8.0-512bd4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET 8" />
+  <img src="https://img.shields.io/badge/games-350%2B%20catalog-00e673?style=flat-square" alt="350+ games" />
+</p>
 
 ---
 
-## Pro features
+## What is ReflexCore?
 
-Unlocked after license activation (Polar). Purchase CTA in-app:
+ReflexCore is a **native Windows optimizer** built for players who care about frame pacing, input latency, and high-polling mice. It watches your foreground game, applies reversible OS-level tweaks, and backs off when you're done — **no DLL injection, no anti-cheat evasion, no sketch.**
 
-**⭐ PURCHASE PRO KEY (REFLEXCORE.XYZ)** → [https://reflexcore.xyz/#pro](https://reflexcore.xyz/#pro)
+Think of it as a **competitive play orchestrator**: power plans, MMCSS, USB queues, UE config tuning, and a click-through performance HUD — all from one neon control panel.
 
-| Feature | What it does |
-|--------|----------------|
-| **Disable Nagle’s Algorithm** | Lower TCP packet latency |
-| **Maximize System Responsiveness** | Disables network throttling index |
-| **Disable GameDVR / Game Bar** | Removes overlay capture overhead |
-| **Ultimate Performance power plan** | Forces Windows high-performance power scheme |
-| **Force HAGS** | Hardware-accelerated GPU scheduling |
-| **Raw mouse (1:1)** | Disables Windows mouse acceleration |
-| **SUPER KDLS** | 1024-frame USB / input buffer injection for high polling |
-| **GPU MSI-X shunt** | Exclusive high-vector MSI-X routing for the GPU |
-| **Win32 priority / affinity shunt** | Process affinity + priority separation |
-| **RIDEV_NOLEGACY 8K Shield** | Raw Input swallow (desktop cursor suppressed under game focus) |
-| **Full 8K Isolation** | UE5-oriented core shunt + Game Mode kill + isolator engines |
-| **Background app purge** | Closes noisy background / telemetry processes |
-| **VRAM / standby flush** | Empties working sets and standby memory |
-| **DirectX shader pre-cache lock** | Stabilizes DX pipeline allocations |
-| **Disable telemetry (DiagTrack)** | Turns down Windows diagnostics services |
-| **Disable Fullscreen Optimizations** | Global FSO off for target executables |
-| **Tournament Kiosk Mode** | Suspends `explorer.exe` during play (kiosk-style) |
-| **Pro themes** | Visual theme profiles (when unlocked) |
-
-### Engines used by Pro / 8K paths
-
-- **CoreIsolatorEngine** — reserves cores 0–1 for USB IRQs; pins games off those cores  
-- **RawInputEngine** — `RIDEV_NOLEGACY` mouse inject / restore  
-- **HardwareTweakerEngine** — ASPM / wake-state tweaks  
-- **MemoryPurgerEngine** — standby / working-set purge  
-- **AntiCheatWatchdog** — detects conflicting input filters (e.g. RawAccel)  
-- **GameModeManager** — disables Windows Game Mode / GameDVR keys  
-- **AudioBufferShuntEngine** — low-latency audio buffer routing  
-- **BurstOverdriveEngine** — CPU throttle floor/ceiling via `powercfg`  
-- **NetworkInterruptSteeringEngine** — RSS queue steering  
-- **CacheAffinityMappingEngine** — cache-lane affinity for the active game  
-- **DirectFlipOverdriveEngine** — DirectFlip / independent flip registry path  
-
----
-
-## Buy Pro
-
-1. Open **LICENSE** in the app, or visit [https://reflexcore.xyz/#pro](https://reflexcore.xyz/#pro).  
-2. Checkout on Polar (site price: **$9.99**, was $14.99). Use code **`REFLEX99`** when offered.  
-3. Paste your key → **ACTIVATE LICENSE**.  
-4. Restart the app so Pro themes and locks refresh.
-
-In-app button label: **PURCHASE PRO KEY (REFLEXCORE.XYZ)**.
-
----
-
-## Build & publish
-
-```bat
-cd "C:\Users\Kaedyn VR\Documents\ReflexCoreFree"
-dotnet tool restore
-dotnet build -c Release -r win-x64
-dotnet publish -c Release -r win-x64 --self-contained
+```
+   ┌─────────────┐     foreground      ┌──────────────────┐
+   │  Your Game  │ ◄────────────────── │  ReflexCore      │
+   │  (UE/FPS)   │   detect + profile  │  Orchestrator    │
+   └─────────────┘                     └────────┬─────────┘
+          ▲                                     │
+          │         one-shot engage             ▼
+          └─────────────── OS tweaks ─── timer / MMCSS / USB / DWM
 ```
 
-Release builds run **Obfuscar** after compile and replace the intermediate DLL so single-file publish embeds the obfuscated assembly.
+---
 
-Helpers (if needed on Windows):
+## v1.5.0 highlights
 
-- `restore-tools.bat` — recreate / unblock `.config\dotnet-tools.json`  
-- `fix-csproj.bat` — strip UTF-8 BOM from `ReflexCoreFree.csproj` (MSB4025)
-
-### Installer (Inno Setup)
-
-1. Publish as above.  
-2. Open `ReflexCoreFree-Setup.txt` in Inno Setup Compiler.  
-3. Source path expects:
-
-`C:\Users\Kaedyn VR\Documents\ReflexCoreFree\bin\Release\net8.0-windows\win-x64\publish\*`
-
-Output: `...\ReflexCoreFree\installer\ReflexCore_Setup_v1.3.8.exe`
+| Feature | What it does |
+|--------|----------------|
+| **350+ game catalog** | Embedded `games.manifest.json` — nicknames, process names, instant O(1) foreground match |
+| **Universal 4K / 8K orchestration** | Tiered play profiles for catalog titles, Unreal Engine, and Splitgate |
+| **Performance HUD** | Click-through overlay — 6 positions, 6 esports themes (Neon, Cyber, Toxic, Gold, Purple, Minimal) |
+| **Auto Game Profile** | Power plan + UE tuning when a matched title hits foreground |
+| **CPU anti-stutter guard** | Throttle off, sleep inhibit, priority boost during play |
+| **WM_INPUT isolation** | At 4K+ on UE/Splitgate, ReflexCore stops sampling mouse so your game isn't starved |
+| **One-shot session engage** | No per-tick re-apply churn — fixes mouse/timer freeze regressions |
+| **Minecraft-safe affinity** | JVM / UWP titles skip harmful CPU pinning |
+| **Safety Center** | Registry backup, restore point, HUD controls, honest system state |
+| **ReD Theme Matrix** | Multiple UI skins — cycle live from the sidebar |
 
 ---
 
-## Website
+## Free vs Pro
 
-Static site in `ReflexCore-Web/`:
+| | **Free** | **Pro** |
+|---|:---:|:---:|
+| Baseline Windows tweaks (ticks, NTFS, Nagles, MMCSS, Game DVR, power plan) | ✅ | ✅ |
+| 350+ game auto-detection & foreground boost | ✅ | ✅ |
+| Performance HUD + theme matrix | ✅ | ✅ |
+| UE config tuning & cache clean | ✅ | ✅ |
+| 4K / 8K orchestration (safe paths) | ✅ | ✅ |
+| Recommended competitive preset | ✅ | ✅ (full kernel stack) |
+| **KDLS** — Kernel DPC Lane Shunting | — | ✅ |
+| **8K Shield** — deep mouse queues + WM_INPUT isolation | — | ✅ |
+| **MSI interrupt routing** | — | ✅ |
+| **Win32 quantum priority** | — | ✅ |
+| **Max USB polling** / IRQ steering | — | ✅ |
+| **DXGI low-latency** / WDDM queue trim | — | ✅ |
+| **VRAM flush** / auto RAM purge | — | ✅ |
+| **Tournament mode** (quiet background) | — | ✅ |
+| **Splitgate 8K Extreme** (opt-in) | — | ✅ |
 
-| File | Role |
-|------|------|
-| `index.html` | Marketing site (download, features, Pro, FAQ) |
-| `banner.jpg` | Hero art |
-| `reflex.ico` | Favicon |
-| `sitemap.xml` / `robots.txt` | SEO |
-
-Deploy the contents of `ReflexCore-Web/` to the host for [reflexcore.xyz](https://reflexcore.xyz/).
+> **Pro lifetime:** [$9.99 at reflexcore.xyz](https://reflexcore.xyz/#pro) — use promo code **`REFLEX99`** at checkout.  
+> Activate in-app: **Activate License Key** (Polar-backed, 7-day offline grace).
 
 ---
 
-## Safety notes
+## Splitgate & Unreal 8K
 
-- Requires **Administrator**.  
-- **8K Shield** and **Tournament Mode** change desktop / Explorer behavior — use only when you understand the impact.  
-- Set mouse DPI to **1600+** in your vendor software (Synapse, G HUB, iCUE, Wootility, etc.) when using high polling.  
-- Create a restore point before aggressive registry / BCD changes if you are unsure.
+For **Splitgate** and other **UE4/UE5** titles at **7500+ Hz** polling:
+
+- **Safe path (default / Recommended):** neutral OS timer + native assist INI — no fighting UE's render clock
+- **8K Extreme (Pro, opt-in):** 768 mouse / 256 keyboard queues, USB IRQ isolation, KDLS, DWM/WDDM boost, 50% render INI
+
+Extreme mode shows a one-time warning and writes game INI — **restart the game** after enabling.
 
 ---
 
-## License / publisher
+## Download & run
 
-Installer publisher: **Lift Development Solutions**  
-Product: **ReflexCore** · Version **1.3.8**
+1. Get the latest build from **[reflexcore.xyz](https://reflexcore.xyz/#download)** or [GitHub Releases](https://github.com/MintyLiteralGod/hiddencore/releases)
+2. Run `ReflexCore-Setup-1.5.0.exe` (or `ReflexCore.exe` from a publish folder)
+3. Accept the **UAC Administrator** prompt — kernel/registry tweaks require elevation
+4. Hit **START OPTIMIZER**, launch your game, watch the HUD light up
+
+**Discord:** [discord.gg/34pCtCpQJv](https://discord.gg/34pCtCpQJv)
+
+---
+
+## Build from source (Windows)
+
+```powershell
+cd "C:\Users\Kaedyn VR\Documents\ReflexCoreFree"
+git fetch origin
+git checkout cursor/flawless-8k-4k-orchestrator-7e1b
+git pull origin cursor/flawless-8k-4k-orchestrator-7e1b
+
+# Dev run
+dotnet run --project ReflexCore.csproj
+
+# Release installer (publish + Inno Setup)
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\build-release.ps1" -SelfContained -Inno
+```
+
+Or double-click **`BUILD_INSTALLER.cmd`** in the project root.
+
+Full installer docs: [`Installer/README.md`](Installer/README.md)  
+Ship checklist: [`SHIPPING.md`](SHIPPING.md)
+
+### Common build gotchas
+
+| Problem | Fix |
+|--------|-----|
+| `dotnet-tools.json` blocked (Mark of the Web) | `Unblock-File -LiteralPath ".\.config\dotnet-tools.json"` |
+| Scripts disabled | Use `BUILD_INSTALLER.cmd` or `-ExecutionPolicy Bypass` |
+| Inno "No files found" line 68 | Run publish first — don't compile `.iss` before `dotnet publish` |
+| Hundreds of CS0101 errors | Run `.\scripts\verify-clean-sources.ps1` — likely duplicate `GameCatalog.cs` |
+| MSB4025 project file invalid | Run `.\repair-project.ps1` or restore `ReflexCore.csproj` from git |
+
+Always build with **`ReflexCore.csproj`** — not legacy `ReflexCoreFree.csproj` or `Form1.cs`.
+
+---
+
+## Safety & fair play
+
+ReflexCore is **external-only**:
+
+- No process injection
+- No anti-cheat bypass
+- No EAC/BE evasion tooling
+
+Follow your game's publisher and tournament rules. Disable overlays or system tweaks if a league forbids them.
+
+Config lives beside the exe as `ReflexCoreConfig.json`. Safety Center can snapshot registry state before you go wild.
+
+---
+
+## Project layout
+
+```
+ReflexCore.csproj          Main app (.NET 8 WinForms)
+Program.cs                 UI shell + optimization engines
+GameCatalog.cs             350+ game index
+games.manifest.json        Embedded game database
+HighPollingPlayOrchestrator.cs   4K/8K profile routing
+SplitgatePlayEngine.cs     Splitgate / UE play coordinator
+PerformanceHudEngine.cs    Click-through gaming overlay
+Installer/                 Inno Setup script
+ReflexCore-Web/            reflexcore.xyz site assets
+build-release.ps1          Publish + installer pipeline
+```
+
+---
+
+## Links
+
+| | |
+|---|---|
+| **Website** | [reflexcore.xyz](https://reflexcore.xyz) |
+| **Pro license** | [reflexcore.xyz/#pro](https://reflexcore.xyz/#pro) |
+| **Updates** | [reflexcore.xyz/version.json](https://reflexcore.xyz/version.json) |
+| **Discord** | [discord.gg/34pCtCpQJv](https://discord.gg/34pCtCpQJv) |
+
+---
+
+<p align="center">
+  <sub>Built for players who feel the difference between 240 FPS and <em>stable</em> 240 FPS.</sub><br/>
+  <sub>ReflexCore v1.5.0 — © ReflexCore</sub>
+</p>
