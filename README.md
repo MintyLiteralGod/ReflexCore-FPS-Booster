@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="ReflexCore-Web/reflex.ico" alt="ReflexCore" width="72" height="72" />
+  <img src="reflex.ico" alt="ReflexCore" width="72" height="72" />
 </p>
 
 <h1 align="center">REFLEXCORE</h1>
